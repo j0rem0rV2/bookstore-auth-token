@@ -10,7 +10,7 @@ class CategoryFactory(factory.django.DjangoModelFactory):
     active = factory.Iterator([True, False])
 
     class Meta:
-        model= Category
+        model = Category
 
 class ProductFactory(factory.django.DjangoModelFactory):
     price = factory.Faker('pyint')
@@ -23,9 +23,8 @@ class ProductFactory(factory.django.DjangoModelFactory):
             return
         
         if extracted:
-            for category in extracted:
-                self.category.add(category)
+            for categories in extracted:
+                self.category.add(categories)
 
     class Meta:
         model = Product
-        skip_postgeneration_save = True
