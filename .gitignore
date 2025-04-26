@@ -1,6 +1,3 @@
 pypackages/
 .venv/
 requirements.txt
-pypackages/
-.venv/
-requirements.txt
